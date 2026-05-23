@@ -229,6 +229,25 @@
         transform: translateY(35px) rotate(-8deg);
       }
 
+      /* MABADILIKO HAPA: Tumeongeza style za kadi zenye picha halisi kwa nyuma */
+      .map-preview.hydro-bg {
+        background: linear-gradient(rgba(6, 18, 27, 0.4), rgba(6, 18, 27, 0.5)), url('images/Hydrocn.png');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .map-preview.lulc-bg {
+        background: linear-gradient(rgba(6, 18, 27, 0.4), rgba(6, 18, 27, 0.5)), url('images/LULC.png');
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Tunatoa ile mistari ya gridi ya uwongo kama picha ipo kwa nyuma */
+      .map-preview.hydro-bg::before, .map-preview.hydro-bg::after,
+      .map-preview.lulc-bg::before, .map-preview.lulc-bg::after {
+        display: none;
+      }
+
       .map-label {
         position: relative;
         z-index: 1;
@@ -492,7 +511,6 @@
 
   <body>
     <main>
-      <!-- HERO SECTION -->
       <section class="section">
         <div class="container grid-hero">
           <div>
@@ -522,7 +540,6 @@
         </div>
       </section>
 
-      <!-- EXPERTISE SECTION -->
       <section class="section" style="background: rgba(94, 234, 212, 0.02);">
         <div class="container">
           <p class="eyebrow">Professional Experience</p>
@@ -545,7 +562,6 @@
         </div>
       </section>
 
-      <!-- ABOUT SECTION -->
       <section class="section">
         <div class="container grid-about">
           <div>
@@ -577,7 +593,6 @@
         </div>
       </section>
 
-      <!-- PORTFOLIO SECTION -->
       <section id="portfolio" class="section">
         <div class="container">
           <p class="eyebrow">Recent Work</p>
@@ -589,7 +604,7 @@
           <div class="cards-grid two-columns">
             <article class="card">
               <span class="badge">Hydrological Modeling</span>
-              <div class="map-preview"><span class="map-label">Watershed Analysis</span></div>
+              <div class="map-preview hydro-bg"><span class="map-label">Watershed Analysis</span></div>
               <h3>Watershed Delineation & Runoff Modeling</h3>
               <p class="muted">Comprehensive watershed analysis including drainage extraction, runoff estimation using hydrological models, and flood-risk assessment for infrastructure planning.</p>
               <div class="stats">
@@ -601,7 +616,7 @@
 
             <article class="card">
               <span class="badge">Environmental GIS</span>
-              <div class="map-preview"><span class="map-label">Land Use Analysis</span></div>
+              <div class="map-preview lulc-bg"><span class="map-label">Land Use Analysis</span></div>
               <h3>Multi-Temporal LULC Change Detection</h3>
               <p class="muted">Time-series land use/land cover analysis using satellite imagery to track environmental changes, deforestation trends, and urbanization patterns over 10-year period.</p>
               <div class="stats">
@@ -614,7 +629,6 @@
         </div>
       </section>
 
-      <!-- SERVICES SECTION -->
       <section class="section" style="background: rgba(94, 234, 212, 0.02);">
         <div class="container">
           <div class="center">
@@ -642,7 +656,6 @@
         </div>
       </section>
 
-      <!-- NEWS/INSIGHTS SECTION -->
       <section class="section">
         <div class="container">
           <div class="center">
@@ -676,101 +689,9 @@
         </div>
       </section>
 
-      <!-- CONTACT SECTION -->
       <section id="contact" class="section">
         <div class="container center">
           <p class="eyebrow">Get Started</p>
           <h2>Let's Work Together</h2>
           <p class="muted">
-            Available for contract work, consultancies, technical assessments, and collaborative projects in GIS, hydrology, and environmental analysis.
-          </p>
-          
-          <div class="contact-actions">
-            <a class="btn primary" href="https://wa.me/255682647397" target="_blank" rel="noopener noreferrer">WhatsApp Message &rarr;</a>
-            <a class="btn" href="tel:+255682647397">Call: +255 68 264 7397</a>
-          </div>
-
-          <p class="muted" style="margin-top: 32px; font-size: 14px;">
-            Email: <span class="accent">joelngusulu97@gmail.com</span> | LinkedIn: <a href="https://www.linkedin.com/in/yoel-ngusulu-66748a1b6" target="_blank" style="color: #5eead4;">@yoel-ngusulu</a>
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <!-- CONTACT FORM MODAL -->
-    <div class="modal-overlay" id="contactModal">
-      <div class="modal-content">
-        <button class="close-modal" id="closeModalBtn">&times;</button>
-        <h3 style="color: #5eead4; margin-bottom: 8px;">Send Me a Message</h3>
-        <p class="muted" style="font-size: 14px; margin-bottom: 24px;">I'll get back to you within 24 hours.</p>
-        
-        <form id="contactForm" onsubmit="handleContactForm(event)">
-          <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" required placeholder="Your Name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" required placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label for="subject">Project Type</label>
-            <input type="text" id="subject" placeholder="e.g., Hydrological Study, GIS Mapping">
-          </div>
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" required placeholder="Tell me about your project..." rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn primary" style="width: 100%; margin-top: 10px;">Send Message</button>
-        </form>
-      </div>
-    </div>
-
-    <script>
-      // Modal functionality
-      const contactModal = document.getElementById('contactModal');
-      const closeModalBtn = document.getElementById('closeModalBtn');
-
-      closeModalBtn.addEventListener('click', () => {
-        contactModal.classList.remove('active');
-      });
-
-      contactModal.addEventListener('click', (e) => {
-        if (e.target === contactModal) {
-          contactModal.classList.remove('active');
-        }
-      });
-
-      function handleContactForm(event) {
-        event.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-
-        // Construct WhatsApp message
-        const whatsappMessage = `Hello! My name is ${name}. Email: ${email}. Project: ${subject}. Message: ${message}`;
-        const whatsappURL = `https://wa.me/255682647397?text=${encodeURIComponent(whatsappMessage)}`;
-
-        window.open(whatsappURL, '_blank');
-        
-        contactModal.classList.remove('active');
-        document.getElementById('contactForm').reset();
-      }
-
-      // Smooth scroll for navigation
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          const href = this.getAttribute('href');
-          if (href !== '#' && document.querySelector(href)) {
-            e.preventDefault();
-            document.querySelector(href).scrollIntoView({
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    </script>
-  </body>
-</html>
+            Available for contract work, consultancies, technical assessments, and collaborative
