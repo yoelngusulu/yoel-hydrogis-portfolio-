@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yoeln HdroGIS Portfolio & Data Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
       :root {
         color-scheme: dark;
@@ -598,6 +599,84 @@
         outline: none;
       }
 
+      .site-footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(6, 18, 27, 0.95);
+        padding: 48px 24px 24px;
+      }
+
+      .footer-container {
+        width: min(1120px, 100%);
+        margin: 0 auto;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        margin-bottom: 32px;
+      }
+
+      .footer-section h3 {
+        color: #5eead4;
+        font-size: 16px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .footer-section p {
+        color: #cbd5e1;
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 8px 0;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        color: #5eead4;
+        font-size: 18px;
+        transition: all 200ms ease;
+      }
+
+      .social-icon:hover {
+        color: #99f6e4;
+        border-color: #5eead4;
+        background: rgba(94, 234, 212, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .footer-divider {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+      }
+
+      .footer-copyright {
+        color: #94a3b8;
+        font-size: 13px;
+      }
+
+      .footer-copyright span {
+        color: #5eead4;
+      }
+
       @media (min-width: 768px) {
         .section {
           padding: 96px 64px;
@@ -620,6 +699,9 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
+        .footer-content {
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
 
       @media (max-width: 640px) {
@@ -647,6 +729,11 @@
         .btn {
           width: 100%;
         }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
       }
     </style>
   </head>
@@ -671,7 +758,7 @@
             <p class="eyebrow">GIS | Hydrology | Remote Sensing</p>
             <h1>Yoeln <span class="accent">HdroGIS</span></h1>
             <p class="lead">
-             Professional GIS and Hydrology Hub showcasing advanced spatial analysis, hydrological and hydrogeological modelling, remote sensing applications, and geospatial data solutions. The platform offers access to various GIS shapefiles and spatial datasets that are available for download, supporting hydrological research, groundwater assessment, environmental monitoring, watershed analysis, and decision-making projects. 
+             Professional GIS and Hydrology Hub showcasing advanced spatial analysis, hydrological and hydrogeological modelling, remote sensing applications, and geospatial data solutions.
             </p>
             <div class="actions">
               <a class="btn primary" href="#data-hub">Download GIS Data -&gt;</a>
@@ -850,7 +937,7 @@
               <div class="stats"><span>Google Earth Engine</span><span>SRTM DEM</span></div>
               <h3>How to Visualize SRTM DEM with Google Earth Engine</h3>
               <p class="muted">A public LinkedIn post showing DEM processing for Dar es Salaam using the GEE JavaScript API, custom elevation visualization, clipping, and export workflows.</p>
-              <a class="card-link" href="https://www.linkedin.com/posts/yoel-ngusulu-66748a1b6_gis-remotesensing-hydrology-activity-7376557042414653440-3gK_" target="_blank" rel="noopener noreferrer">View on LinkedIn -&gt;</a>
+              <a class="card-link" href="https://www.linkedin.com/posts/yoel-ngusulu-66748a1b6_gis-remotesensing-hydrology-activity-7376557042414653440-3gK_" target="_blank" rel="noopener noreferrer">View on LinkedIn →</a>
             </article>
 
             <article class="card">
@@ -860,7 +947,7 @@
               <div class="stats"><span>Landsat 8</span><span>NDVI</span></div>
               <h3>Land Cover Mapping of Iringa Urban (2025)</h3>
               <p class="muted">A public LinkedIn post presenting LULC analysis using Landsat 8, NDVI classification, ArcGIS Pro map production, and environmental management insights.</p>
-              <a class="card-link" href="https://www.linkedin.com/posts/yoel-ngusulu-66748a1b6_gis-remotesensing-ndvi-activity-7386364923301416961-pXhZ" target="_blank" rel="noopener noreferrer">View on LinkedIn -&gt;</a>
+              <a class="card-link" href="https://www.linkedin.com/posts/yoel-ngusulu-66748a1b6_gis-remotesensing-ndvi-activity-7386364923301416961-pXhZ" target="_blank" rel="noopener noreferrer">View on LinkedIn →</a>
             </article>
           </div>
         </div>
@@ -881,6 +968,47 @@
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Yoeln HdroGIS</h3>
+            <p>Professional GIS and Hydrology consultant specializing in spatial analysis, remote sensing, and water resource management across East Africa.</p>
+            <div class="social-links">
+              <a class="social-icon" href="https://github.com/yoelngusulu" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub Profile">
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="social-icon" href="https://www.linkedin.com/in/yoel-ngusulu-66748a1b6" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <p><a href="#data-hub" style="color: #cbd5e1; transition: color 200ms ease;" onmouseover="this.style.color='#5eead4'" onmouseout="this.style.color='#cbd5e1'">Data Hub</a></p>
+            <p><a href="#portfolio" style="color: #cbd5e1; transition: color 200ms ease;" onmouseover="this.style.color='#5eead4'" onmouseout="this.style.color='#cbd5e1'">Portfolio</a></p>
+            <p><a href="#about" style="color: #cbd5e1; transition: color 200ms ease;" onmouseover="this.style.color='#5eead4'" onmouseout="this.style.color='#cbd5e1'">About</a></p>
+            <p><a href="#contact" style="color: #cbd5e1; transition: color 200ms ease;" onmouseover="this.style.color='#5eead4'" onmouseout="this.style.color='#cbd5e1'">Contact</a></p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Details</h3>
+            <p><strong>Location:</strong> Tanzania</p>
+            <p><strong>Phone:</strong> +255 682 647 397</p>
+            <p><strong>Email:</strong> info@hydrogisgis.com</p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/255682647397" style="color: #5eead4;" target="_blank" rel="noopener noreferrer">+255 682 647 397</a></p>
+          </div>
+        </div>
+
+        <div class="footer-divider">
+          <div class="footer-copyright">
+            © <span>2026</span> Yoeln HdroGIS. All rights reserved. | Professional GIS & Hydrology Solutions
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <div class="modal-overlay" id="signUpModal" aria-hidden="true">
       <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -1005,19 +1133,35 @@
 
       signUpForm.addEventListener("submit", (event) => {
         event.preventDefault();
-
-        const name = document.getElementById("username").value.trim();
+        
+        const username = document.getElementById("username").value.trim();
         const email = document.getElementById("email").value.trim();
+        const profession = document.getElementById("profession").value.trim();
 
-        if (!name || !email) {
+        if (!username || !email) {
+          alert("Please fill in all required fields.");
           return;
         }
 
-        isUserRegistered = true;
         localStorage.setItem("yoelnHdroGISRegistered", "true");
-        closeModal();
+        localStorage.setItem("yoelnHdroGISUserData", JSON.stringify({
+          name: username,
+          email: email,
+          profession: profession,
+          registeredAt: new Date().toISOString()
+        }));
+
         markDownloadsReady();
-        startDownload(selectedDataset || "GIS dataset");
+        isUserRegistered = true;
+        
+        closeModal();
+        signUpForm.reset();
+
+        if (selectedDataset) {
+          startDownload(selectedDataset);
+        }
+
+        alert("Registration successful! You can now download all datasets.");
       });
     </script>
   </body>
