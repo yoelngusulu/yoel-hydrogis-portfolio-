@@ -273,28 +273,54 @@
 
       .visual-carousel {
         overflow: hidden;
-        border-block: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.018);
+        border-block: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(135deg, rgba(94, 234, 212, 0.04), rgba(14, 41, 48, 0.06));
       }
 
       .visual-carousel.section {
-        padding: 34px 0;
+        padding: 64px 0;
       }
 
       .visual-carousel .container {
-        margin-bottom: 18px;
+        margin-bottom: 48px;
+        padding: 0 24px;
+      }
+
+      .visual-carousel .eyebrow {
+        margin-bottom: 12px;
       }
 
       .visual-carousel h2 {
-        margin-bottom: 0;
-        font-size: clamp(24px, 3vw, 34px);
+        margin-bottom: 8px;
+        font-size: clamp(28px, 3vw, 40px);
+        background: linear-gradient(135deg, #f8fafc 0%, #5eead4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .visual-carousel-subtitle {
+        color: #94a3b8;
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 12px;
+      }
+
+      .visual-track-wrapper {
+        position: relative;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 12px;
+        border: 1px solid rgba(94, 234, 212, 0.1);
+        padding: 24px 0;
+        backdrop-filter: blur(8px);
       }
 
       .visual-track {
         display: flex;
         width: max-content;
         gap: 16px;
-        padding: 6px 0;
+        padding: 0 24px;
         animation: slideLeft 36s linear infinite;
       }
 
@@ -308,17 +334,19 @@
         width: min(240px, 62vw);
         aspect-ratio: 1 / 1;
         overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
         background: #0e2930;
-        box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        transition: all 300ms ease;
+        flex-shrink: 0;
       }
 
       .visual-card img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 180ms ease, opacity 180ms ease;
+        transition: transform 240ms ease, opacity 240ms ease;
       }
 
       .visual-card::after {
@@ -337,11 +365,18 @@
         color: #f8fafc;
         font-weight: 800;
         line-height: 1.25;
+        font-size: 13px;
+      }
+
+      .visual-card:hover {
+        border-color: rgba(94, 234, 212, 0.4);
+        box-shadow: 0 16px 48px rgba(94, 234, 212, 0.12);
+        transform: translateY(-6px);
       }
 
       .visual-card:hover img {
-        opacity: 0.9;
-        transform: scale(1.05);
+        opacity: 0.92;
+        transform: scale(1.08);
       }
 
       @keyframes slideLeft {
@@ -805,24 +840,27 @@
         <div class="container">
           <p class="eyebrow">Project Visuals</p>
           <h2>Fieldwork, Maps & Hydrology Outputs</h2>
+          <p class="visual-carousel-subtitle">Explore our professional fieldwork, cartographic outputs, and geospatial analysis results from across East Africa</p>
         </div>
-        <div class="visual-track" aria-label="Project image slider">
-          <a class="visual-card" href="#portfolio"><img src="pangani.jpg" alt="Pangani hydrology field work" loading="lazy" /><span>Pangani Hydrology Study</span></a>
-          <a class="visual-card" href="#portfolio"><img src="africamap.png" alt="Africa GIS map" loading="lazy" /><span>Africa GIS Context</span></a>
-          <a class="visual-card" href="#portfolio"><img src="cn.png" alt="Curve number hydrology output" loading="lazy" /><span>CN Runoff Analysis</span></a>
-          <a class="visual-card" href="#portfolio"><img src="mtendeli.jpeg" alt="Mtendeli field mapping" loading="lazy" /><span>Mtendeli Field Mapping</span></a>
-          <a class="visual-card" href="#portfolio"><img src="topographsurvey.jpg" alt="Topographic survey" loading="lazy" /><span>Topographic Surveys</span></a>
-          <a class="visual-card" href="#portfolio"><img src="nyarugusu.jpg" alt="Nyarugusu field project" loading="lazy" /><span>Nyarugusu Field Project</span></a>
-          <a class="visual-card" href="#data-hub"><img src="rusle.png" alt="RUSLE map output" loading="lazy" /><span>RUSLE GIS Output</span></a>
-          <a class="visual-card" href="#portfolio"><img src="lulc.png" alt="LULC map output" loading="lazy" /><span>LULC Mapping Output</span></a>
-          <a class="visual-card" href="#portfolio"><img src="pangani.jpg" alt="Pangani hydrology field work" loading="lazy" /><span>Pangani Hydrology Study</span></a>
-          <a class="visual-card" href="#portfolio"><img src="africamap.png" alt="Africa GIS map" loading="lazy" /><span>Africa GIS Context</span></a>
-          <a class="visual-card" href="#portfolio"><img src="cn.png" alt="Curve number hydrology output" loading="lazy" /><span>CN Runoff Analysis</span></a>
-          <a class="visual-card" href="#portfolio"><img src="mtendeli.jpeg" alt="Mtendeli field mapping" loading="lazy" /><span>Mtendeli Field Mapping</span></a>
-          <a class="visual-card" href="#portfolio"><img src="topographsurvey.jpg" alt="Topographic survey" loading="lazy" /><span>Topographic Surveys</span></a>
-          <a class="visual-card" href="#portfolio"><img src="nyarugusu.jpg" alt="Nyarugusu field project" loading="lazy" /><span>Nyarugusu Field Project</span></a>
-          <a class="visual-card" href="#data-hub"><img src="rusle.png" alt="RUSLE map output" loading="lazy" /><span>RUSLE GIS Output</span></a>
-          <a class="visual-card" href="#portfolio"><img src="lulc.png" alt="LULC map output" loading="lazy" /><span>LULC Mapping Output</span></a>
+        <div class="visual-track-wrapper">
+          <div class="visual-track" aria-label="Project image slider">
+            <a class="visual-card" href="#portfolio"><img src="pangani.jpg" alt="Pangani hydrology field work" loading="lazy" /><span>Pangani Hydrology Study</span></a>
+            <a class="visual-card" href="#portfolio"><img src="africamap.png" alt="Africa GIS map" loading="lazy" /><span>Africa GIS Context</span></a>
+            <a class="visual-card" href="#portfolio"><img src="cn.png" alt="Curve number hydrology output" loading="lazy" /><span>CN Runoff Analysis</span></a>
+            <a class="visual-card" href="#portfolio"><img src="mtendeli.jpeg" alt="Mtendeli field mapping" loading="lazy" /><span>Mtendeli Field Mapping</span></a>
+            <a class="visual-card" href="#portfolio"><img src="topographsurvey.jpg" alt="Topographic survey" loading="lazy" /><span>Topographic Surveys</span></a>
+            <a class="visual-card" href="#portfolio"><img src="nyarugusu.jpg" alt="Nyarugusu field project" loading="lazy" /><span>Nyarugusu Field Project</span></a>
+            <a class="visual-card" href="#data-hub"><img src="rusle.png" alt="RUSLE map output" loading="lazy" /><span>RUSLE GIS Output</span></a>
+            <a class="visual-card" href="#portfolio"><img src="lulc.png" alt="LULC map output" loading="lazy" /><span>LULC Mapping Output</span></a>
+            <a class="visual-card" href="#portfolio"><img src="pangani.jpg" alt="Pangani hydrology field work" loading="lazy" /><span>Pangani Hydrology Study</span></a>
+            <a class="visual-card" href="#portfolio"><img src="africamap.png" alt="Africa GIS map" loading="lazy" /><span>Africa GIS Context</span></a>
+            <a class="visual-card" href="#portfolio"><img src="cn.png" alt="Curve number hydrology output" loading="lazy" /><span>CN Runoff Analysis</span></a>
+            <a class="visual-card" href="#portfolio"><img src="mtendeli.jpeg" alt="Mtendeli field mapping" loading="lazy" /><span>Mtendeli Field Mapping</span></a>
+            <a class="visual-card" href="#portfolio"><img src="topographsurvey.jpg" alt="Topographic survey" loading="lazy" /><span>Topographic Surveys</span></a>
+            <a class="visual-card" href="#portfolio"><img src="nyarugusu.jpg" alt="Nyarugusu field project" loading="lazy" /><span>Nyarugusu Field Project</span></a>
+            <a class="visual-card" href="#data-hub"><img src="rusle.png" alt="RUSLE map output" loading="lazy" /><span>RUSLE GIS Output</span></a>
+            <a class="visual-card" href="#portfolio"><img src="lulc.png" alt="LULC map output" loading="lazy" /><span>LULC Mapping Output</span></a>
+          </div>
         </div>
       </section>
 
@@ -999,22 +1037,76 @@
             <h3>Quick Links</h3>
             <p><a href="#data-hub">Data Hub</a></p>
             <p><a href="#portfolio">Portfolio</a></p>
-            <p><a href="#contact">Contact</a></p>
+            <p><a href="#visuals">Visuals</a></p>
+            <p><a href="#about">About</a></p>
           </div>
 
           <div class="footer-section">
-            <h3>Services</h3>
-            <p>GIS Analysis</p>
-            <p>Hydrological Studies</p>
-            <p>Remote Sensing</p>
-            <p>Cartography</p>
+            <h3>Resources</h3>
+            <p><a href="#contact">Contact</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Terms of Service</a></p>
           </div>
         </div>
 
         <div class="footer-divider">
-          <p class="footer-copyright">© 2025 <span>Yoeln HdroGIS</span>. All rights reserved.</p>
+          <p class="footer-copyright">© 2024 Yoeln HdroGIS. All rights reserved | Designed & Built by <span>Yoel Ngusulu</span></p>
         </div>
       </div>
     </footer>
+
+    <div class="modal-overlay" id="downloadModal">
+      <div class="modal-content">
+        <button class="close-modal" type="button" aria-label="Close modal">&times;</button>
+        <h3 style="margin: 0 0 24px; color: #5eead4;">Download Registration</h3>
+        <form id="downloadForm">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="organization">Organization</label>
+            <input type="text" id="organization" name="organization" />
+          </div>
+          <button type="submit" class="btn primary" style="width: 100%; margin-top: 24px;">Proceed to Download</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Download modal functionality
+      const downloadModal = document.getElementById('downloadModal');
+      const downloadForm = document.getElementById('downloadForm');
+      const closeModalBtn = document.querySelector('.close-modal');
+      const downloadTriggers = document.querySelectorAll('.download-trigger');
+
+      downloadTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          downloadModal.classList.add('active');
+        });
+      });
+
+      closeModalBtn.addEventListener('click', () => {
+        downloadModal.classList.remove('active');
+      });
+
+      downloadModal.addEventListener('click', (e) => {
+        if (e.target === downloadModal) {
+          downloadModal.classList.remove('active');
+        }
+      });
+
+      downloadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for registering! Your download will start shortly.');
+        downloadModal.classList.remove('active');
+        downloadForm.reset();
+      });
+    </script>
   </body>
 </html>
